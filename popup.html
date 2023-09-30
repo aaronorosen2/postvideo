@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>The Screen Recorder</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-sm-12">
+            <h2 class="preview">Preview</h2>
+            <video id="preview" width="300" height="200" autoplay ></video>
+            <button id="startButton" class="btn btn-primary mt-2">
+              Start Recording
+            </button>
+            <button id="stopButton" class="btn btn-danger mt-2">
+              Stop Recording
+            </button>
+            <br>
+            <div>
+              <pre id="log"></pre>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-12">
+            <h2>Recording</h2>
+            <video id="recording" width="300" height="200" controls></video>
+            <br />
+            <a id="downloadButton" class="btn btn-success mt-2"> Download </a>
+          </div>
+        </div>
+      </div>
+
+    <script src="./js/popup.js"></script>
+
+</body>
+</html>
