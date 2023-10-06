@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Screen Recorder</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container mt-3">
+        <span><a id="download" style="display: none;"><button type="button" class="btn btn-primary mb-4">Download</button></a></span>
+        <button type="button" class="btn btn-danger" id="stop" disabled>Stop</button>
+        <button type="button" onclick="recordAudio()" class="btn btn-info">Record Audio</button>
+        <button type="button" onclick="recordVideo()" class="btn btn-info">Record Video</button>
+        <button type="button" onclick="recordScreen()" class="btn btn-info">Record Screen</button>
+        
+
+        <div class="p-5">
+            <!-- Preview video element -->
+            <video autoplay height='480' width="640" muted></video>
+        </div>
+        <!-- Video playback element -->
+        <div class="p-5">
+            <video id="recordedVideo" controls></video>
+        </div>
+        <input type="file" id="uploadVideo" accept="video/*" style="display: none;" onchange="handleUploadedVideo(event)">
+            <button type="button" onclick="openFileUpload()" class="btn btn-upload btn-info">Upload Video</button>
+    
+
+    </div>
+</body>
+
+<link rel="stylesheet" href="./css/styles.css">
+<script src="./js/new.js"></script>
+</html>
