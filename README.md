@@ -19,11 +19,11 @@ This repository is designed to provide a starting point for building web applica
 
 The repository is organized as follows:
 
-- **`index.html`**: This is the main HTML file for your web application. It serves as the entry point for your application and can be customized to build your user interface.
+- **`new.html`**: This is the main HTML file for your web application. It serves as the entry point for your application and can be customized to build your user interface.
 
-- **`script.js`**: This is the JavaScript file that contains the client-side logic for your web application. You can add JavaScript code here to make your application interactive and responsive.
+- **`new.js`**: This is the JavaScript file that contains the client-side logic for your web application. You can add JavaScript code here to make your application interactive and responsive.
 
-- **`css/`**: This directory contains CSS files for styling your web pages. You can add your custom styles or use external CSS libraries.
+- **`style.css/`**: This directory contains CSS files for styling your web pages. You can add your custom styles or use external CSS libraries.
 
 - **`images/`**: You can store your images and other media files in this directory.
 
