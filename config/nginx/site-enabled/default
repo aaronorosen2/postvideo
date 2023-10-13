@@ -1,0 +1,120 @@
+# add_header X-Frame-Options 'allow-from HTTP://LOCALHOST:8000/';
+# add_header Content-Security-Policy 'frame-ancestors localhost:8000'; 
+
+server {
+        add_header X-Frame-Options "ALLOW-FROM http://localhost:8000/";
+        add_header Content-Security-Policy "frame-ancestors localhost:8000";
+
+        listen 8082 default_server;
+        listen [::]:8082 default_server;
+
+
+
+        resolver 8.8.8.8;
+
+        location / {
+
+
+           proxy_set_header Host $http_host;
+           proxy_set_header X-Real-IP $remote_addr;
+           proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+           proxy_set_header X-Forwarded-Proto $scheme;
+
+           index index.html;
+           alias /var/www/;
+           # try_files $uri $uri/index.html;
+
+        }
+        location /profile {
+            try_files $uri $uri/ /agent-profile.html?screen_name=$uri;
+        }
+
+        location /agents {
+            try_files $uri $uri/ /agent-search.html?$uri;
+        }
+
+        location /profile-settings {
+            try_files $uri $uri/ /form.html;
+        }
+
+        location /past-sales {
+            try_files $uri $uri/ /transaction.html;
+        }
+
+        location /inbox/ {
+            try_files $uri $uri/ /inbox.html;
+        }
+
+        location /reports/ {
+            try_files $uri $uri/ /reports.html;
+        }
+
+        location /referrals/ {
+            try_files $uri $uri/ /referrals.html;
+        }
+
+        location /referrals-2/ {
+            try_files $uri $uri/ /referrals-2.html;
+        }
+
+        location /team/ {
+            try_files $uri $uri/ /team.html;
+        }
+
+        location /login/ {
+            try_files $uri $uri/ /login.html;
+        }
+
+        location /sign-in/ {
+            try_files $uri $uri/ /login.html;
+        }
+
+        location /create-account/ {
+            try_files $uri $uri/ /login.html;
+        }
+
+        location /howsearchworks/ {
+            try_files $uri $uri/ /howsearchworks.html;
+        }
+
+        location /howsearchworks/organizing-transactions/ {
+            try_files $uri $uri/ /howsearchworks-transactions.html;
+        }
+
+        location /howsearchworks/search-algorithms/ {
+            try_files $uri $uri/ /howsearchworks-algorithm.html;
+        }
+
+        location /connect-profile/ {
+            try_files $uri $uri/ /connect-profile.html;
+        }
+
+        location /reclaim-proof/ {
+            try_files $uri $uri/ /reclaim-proof.html?$uri;
+        }
+
+        location /property-detail/ {
+            try_files $uri $uri/ /property-detail.html;
+        }
+
+        location /pending-dispute/ {
+            try_files $uri $uri/ /pending-dispute.html;
+        }
+
+        location /upload-proof/ {
+            try_files $uri $uri/ /upload-proof.html;
+        }
+
+        location /marketing/ {
+            try_files $uri $uri/ /marketing.html;
+        }
+        location /verify-email/ {
+            try_files $uri $uri/ /verify-email.html;
+        }
+        location /reset-password/ {
+            try_files $uri $uri/ /reset-password.html;
+        }
+        location /sitemap/ {
+            try_files $uri $uri/ /sitemap.html;
+        }
+}
