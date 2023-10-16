@@ -4,6 +4,24 @@
 <head>
     <title>Screen Recorder</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        .btn-info,
+        .btn-upload {
+            transition: all 0.3s;
+        }
+
+        .btn-info:hover,
+        .btn-upload:hover {
+            transform: scale(1.1);
+        }
+
+        #recordedVideo {
+            width: 100%;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
@@ -11,28 +29,26 @@
 
 <body>
     <div class="container mt-3">
-        <span><a id="download" style="display: none;"><button type="button" class="btn btn-primary mb-4">Download</button></a></span>
-        <button type="button" class="btn btn-danger" id="stop" disabled>Stop</button>
-        <button type="button" onclick="recordAudio()" class="btn btn-info">Record Audio</button>
-        <button type="button" onclick="recordVideo()" class="btn btn-info">Record Video</button>
-        <button type="button" onclick="recordScreen()" class="btn btn-info">Record Screen</button>
-        
-
         <div class="p-5">
-            <!-- Preview video element -->
-            <video autoplay height='480' width="640" muted></video>
+            <span><a id="download" style="display: none;"><button type="button" class="btn btn-primary mb-4 animate__animated animate__fadeIn">Download</button></a></span>
+            <button type="button" class="btn btn-danger animate__animated animate__fadeIn" id="stop" disabled>Stop</button>
+            <button type="button" onclick="recordAudio()" class="btn btn-info animate__animated animate__fadeIn">Record Audio</button>
+            <button type="button" onclick="recordVideo()" class="btn btn-info animate__animated animate__fadeIn">Record Video</button>
+            <button type="button" onclick="recordScreen()" class="btn btn-info animate__animated animate__fadeIn">Record Screen</button>
+            
         </div>
         <!-- Video playback element -->
         <div class="p-5">
-            <video id="recordedVideo" controls></video>
+            <video id="recordedVideo" controls class="animate__animated animate__fadeIn"></video>
         </div>
         <input type="file" id="uploadVideo" accept="video/*" style="display: none;" onchange="handleUploadedVideo(event)">
-            <button type="button" onclick="openFileUpload()" class="btn btn-upload btn-info">Upload Video</button>
-    
+        <button type="button" onclick="openFileUpload()" class="btn btn-upload btn-info animate__animated animate__fadeIn">Upload Video</button>
+
 
     </div>
 </body>
 
 <link rel="stylesheet" href="./css/styles.css">
 <script src="./js/new.js"></script>
+
 </html>

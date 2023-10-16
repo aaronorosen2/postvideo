@@ -53,9 +53,8 @@
                 type: mimeType
             });
             recordedChunks = []
-            const filename = window.prompt('Enter file name');
             downloadLink.href = URL.createObjectURL(blob);
-            downloadLink.download = `${filename || 'recording'}.webm`;
+            downloadLink.download = `${'recording'}.mp4`;
             stopRecord();
             videoElement.srcObject = null;
             
