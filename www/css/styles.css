@@ -2,27 +2,28 @@
 .container {
   text-align: center;
   max-width: 800px;
-  margin: 0 auto;
+  margin: 50px auto;
 }
 
 /* Style the buttons */
 .btn {
   margin: 5px;
-  padding: 10px 20px;
-  font-size: 16px;
+  padding: 10px 25px;
+  font-size: 18px;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: all 0.3s;
 }
 
 .btn:hover {
-  background-color: #007bff; /* Change the background color on hover */
-  color: #fff; /* Change text color on hover */
+  background-color: #007bff; 
+  color: #fff; 
+  transform: scale(1.1); 
 }
 
 /* Style the Download button */
 #download {
-  display: inline-block;
+  display: block;
   margin-top: 20px;
 }
 
@@ -30,7 +31,8 @@
 video {
   max-width: 100%;
   height: auto;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a subtle shadow to videos */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
 }
 
 /* Center the videos in their containers */
@@ -38,22 +40,16 @@ video {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 20px;
+  background-color: #f7f7f7;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
 }
-
-/* Add animation to buttons on hover */
-.btn {
-  transition: transform 0.2s;
-}
-
-.btn:hover {
-  transform: scale(1.1); 
-}
-
-/* Upload button */
 
 /* Style the file input and upload button */
 #uploadVideo {
-  display: none; /* Hide the file input */
+  display: none; 
 }
 
 .btn-upload {
@@ -62,11 +58,11 @@ video {
   font-size: 16px;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: all 0.3s;
 }
 
 .btn-upload:hover {
   background-color: #007bff;
   color: #fff;
+  transform: scale(1.1);
 }
-
